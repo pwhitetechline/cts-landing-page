@@ -1,0 +1,411 @@
+:root {
+    --white: #ffffff;
+    --body-text: #232323;
+    --primary: #f2b90c;
+    --secondary: #169DBF;
+    --accent: forestgreen;
+    --primary-text: 'Lato', sans-serif;
+    --secondary-text: 'Roboto', sans-serif;
+}
+
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and font styles to the body */
+body {
+    font-family: var(--primary-text);
+    background-color: #f5f5f5;
+    color: var(--body-text);
+    font-size: 1em;
+}
+
+/* Style the header section */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    /* border: 2px solid red; */
+}
+
+.logo-wrapper {
+    text-align: right;
+    /* width: 100%; */
+}
+/* Style the navigation menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    /* border: 2px solid black; */
+}
+
+/* Style the logo image */
+.logo img {
+    max-width:175px;
+    height: auto;
+}
+.contact-info {
+    list-style: none;
+}
+
+/* Style the banner section */
+.banner {
+    position: relative;
+    height: 70vh;
+}
+
+.banner-image {
+    background-image: url('/images/banner-background.jpg');
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Add a light blue overlay */
+.banner::after {
+    content: '';
+    background-color: rgba(0, 123, 255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-text {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+
+/* Style the banner heading */
+.banner h1 {
+    font-family: var(--secondary-text);
+	font-weight: 700;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+/* Style the banner subheading */
+.banner p {
+    font-size: 1.5em;
+    line-height: 1.25em;
+    margin-bottom: 40px;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+    display: inline-block;
+    border: none;
+    padding: 15px 60px;
+    background-color: var(--primary);
+    color: #330808;
+    text-decoration: none;
+    font-size: 1.25em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to the CTA button */
+.cta-button:hover {
+    background-color: #f7c632;
+}
+
+/* Style the Features section */
+.features {
+    background-color: #F8F8F8;
+    padding: 0;
+    text-align: center;
+}
+
+/* Create a flex container for the feature content */
+.feature-content {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    padding: 60px 0;
+    gap: 10%;
+}
+
+.feature-image {
+    display: flex;
+    align-items: center;
+    width:100%;
+}
+
+/* Style the feature image */
+.feature-image img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center; 
+}
+
+.feature-image img:hover {
+    transform: scale(1.2); 
+}
+
+/* Style the feature details */
+.feature-details {
+  text-align: left;
+  width: 100%;
+}
+
+/* Style the feature list */
+.feature-details h2 {
+    color: var(--secondary);
+    font-family: var(--secondary-text);
+    font-weight: 700;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.feature-details ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 35px;
+
+}
+
+.feature-details ul li {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 10px 0px;
+    position: relative;
+    padding-left: 30px;
+    animation: float 3s infinite;
+}
+
+.feature-details li:before {
+    content: "\f058";
+    font: 1.25em FontAwesome;
+    color: var(--accent);
+    position: absolute;
+    left: 0px;
+    top: 1px;
+}
+
+p {
+    margin: 30px;
+    margin-left: 0;
+    line-height: 1.25em; 
+}
+
+.feature-details .cta-button {
+    text-align: center;
+    width: 100%;
+}
+
+/* Style the Description section */
+.description {
+    background-color: #EAEAEA;
+}
+
+.description-content {
+    padding: 100px 100px 0 100px;
+}
+.description-content h2 {
+    font-family: var(--secondary-text);
+	font-weight: 700;
+	font-size: 2em;
+    color:var(--secondary);
+    text-align: left;
+}
+
+.description-contents p{
+	font-weight: 400;
+	font-size: 1.25em;
+	margin-bottom: 15px;	
+}
+
+.description .conditions {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 0 auto;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+i {
+    padding-right: 10px;
+    color: var(--accent)
+}
+
+.description .conditions li {
+    font-size: 1.25em;
+	color: #333333;
+	font-weight: 400;
+	margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.description .conditions li:last-child { 
+	margin-bottom: 0px;
+}
+
+.description .conditions li:hover {
+    color: var(--secondary);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+hr {
+    width: 75%;
+    margin:10% auto;
+}
+
+.description-items {
+    width: 100%;
+    padding: 0 100px 60px 100px;
+}
+
+.description-items h2 {
+    font-family: var(--secondary-text);
+	font-weight: 700;
+	font-size: 2em;
+    color:var(--secondary);
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.description-items .items {
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 0 auto;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.description-items .items li {
+    font-size: 1.25em;
+	color: #333333;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.description-items .items-button {
+    display: flex;
+    justify-content: left;
+}
+
+/* Style the Testimonials section */
+.testimonials {
+    background-color: #f5f5f5;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonials h2 {
+    color: #232323;
+	font-family: var(--secondary-text);
+	font-weight: 500;
+	font-size: 2em;
+    color:var(--secondary);
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    border: 1px solid #DADCE0;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0,0,0, 0.2);
+	text-align: center;
+    height: 100%;
+}
+
+.testimonial-card .icon {
+    text-align: center;
+	margin-bottom: 10px;
+}
+
+.testimonial-card .icon i{
+    color: #169DBF;
+	background: rgba(22, 157, 191, 0.2);
+	font-size: 30px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .testimonial-text {
+    color: #232323;
+	font-weight: 400;
+	font-size: 1.15em;
+	margin-bottom: 10px;
+}
+
+.testimonial-card .testimonial-author {
+    color: var(--secondary);
+	font-family: var(--secondary-text);
+	font-weight: 700;
+	font-size: 1.25em;
+	margin-bottom: 0px;
+}
+
+/* Style the Footer section */
+.footer {
+    background-color: #1c1c1c;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.footer-sub-menu a {
+    text-decoration: none;
+    color: #858383;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+/* Style links */
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary);
+    font-weight: 900;
+}
+
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
